@@ -12,7 +12,8 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@master
       - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
-        run: firebase deploy --only firestore:rules
+        uses: w9jds/firebase-action@v2.0.0
+        with:
+          args: firebase deploy --only firestore:rules
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
