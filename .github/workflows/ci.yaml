@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [workflows-cd]
+    branches: [master]
   pull_request:
-    branches: [workflows-cd]
+    branches: [master]
 
 jobs:
   tests:
