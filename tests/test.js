@@ -322,7 +322,7 @@ describe('AMURoboclub app DB Unit Testing', () => {
     const projectId = 'project_abc';
     const db = getFirestore(null);
     const testRead = db.collection('/projects').doc(projectId);
-    await firebase.assertSucceeds(testRead.get());
+    await firebase.assertFails(testRead.get());
   });
 
   it('PT -> Create Projects: {+} All Required Fields, {+} Admin Access, {+} Valid Field Types', async () => {
