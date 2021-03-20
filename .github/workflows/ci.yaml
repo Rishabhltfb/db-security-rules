@@ -19,10 +19,10 @@ jobs:
       - name: Run all the tests
         run: npm run emulate-tests
       - name: Install firebase-cli
-        - if: ${{ github.ref == 'refs/heads/master' }}
-          run: npm install -g firebase-tools
+        if: ${{ github.ref == 'refs/heads/master' }}
+        run: npm install -g firebase-tools
       - name: Deploy to Firebase
-        - if: ${{ github.ref == 'refs/heads/master' }}
-          run: echo 'SUCCESS'
+        if: ${{ github.ref == 'refs/heads/master' }}
+        run: echo 'SUCCESS'
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
