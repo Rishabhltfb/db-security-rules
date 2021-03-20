@@ -331,7 +331,7 @@ describe('AMURoboclub app DB Unit Testing', () => {
     const db = getFirestore(myAuth);
 
     const testRead = db.collection('/projects').doc(projectId);
-    await firebase.assertSucceeds(
+    await firebase.assertFails(
       testRead.set({
         date: 'date',
         description: 'description',
