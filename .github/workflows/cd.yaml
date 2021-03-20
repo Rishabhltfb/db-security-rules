@@ -16,7 +16,7 @@ jobs:
           ref: workflows-cd
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 60 # secs
-          running-workflow-name: "deploy" # HERE
+          running-workflow-name: "Deploy Rules" # HERE
       - name: Checkout Repo
         uses: actions/checkout@master
       - uses: actions/setup-node@v1
