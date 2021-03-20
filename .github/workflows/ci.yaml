@@ -21,7 +21,7 @@ jobs:
       - name: Run all the tests
         run: npm run emulate-tests
       - name: Install firebase-cli
-        if: ${{ env.PUSH_CHECK }}
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
         run: echo cli installed
       - name: Deploy to Firebase
         if: ${{ env.PUSH_CHECK }}
